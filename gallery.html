@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style >
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  -ms-flex: 50%; /* IE 10 */
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+<style>
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body style="background-color: purple">
+</script>
+<P></P>
+<p></p>
+<font size="" 
+            face="verdana"
+                         color="black">
+<button style="background-color: red" class="text-align center" onclick="goBack()" > &Ll;
+&#x022D8;
+&#8920;Go Back</button>
+
+<p></p>
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+
+<!-- Header -->
+<div class="header" id="myHeader">
+  <img src="images/mono.png">
+  <h1>SCHOOL GALLERY</h1>
+  <p>THE PICTURES MAY NOT LOAD AT ONCE BECAUSE OF POOR INTERNET CONNECTION.RELOAD THE PAGE UNTILL ALL THE IMAGES ARE NOT LOADED</p>
+  
+  <button class="btn active" onclick="two()">PICTURES</button>
+  
+</div>
+
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+    <img src="school pics/IMG_20181110_161622.jpg" style="width:100%">
+    <img src="school pics/IMG_20181110_161813.jpg" style="width:100%">
+    <img src="school pics/IMG_20181110_161926.jpg" style="width:100%">
+    <img src="school pics/IMG_20181110_162025.jpg" style="width:100%">
+    <img src="school pics/IMG_20181110_162133.jpg" style="width:100%">
+    <img src="school pics/IMG_20181110_162152.jpg" style="width:100%">
+    <img src="school pics/IMG_20181110_162152.jpg" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="school pics/IMG_20181110_162239.jpg" style="width:100%">
+    <img src="school pics/IMG_20181110_162316.jpg" style="width:100%">
+    <img src="school pics/IMG_20181201_113826.jpg" style="width:100%">
+    <img src="school pics/IMG_20181201_114111.jpg" style="width:100%">
+    <img src="school pics/IMG_20181201_114659.jpg" style="width:100%">
+    <img src="school pics/IMG_20181201_115524.jpg" style="width:100%">
+  </div>  
+  <div class="column">
+    <img src="school pics/IMG_20181201_122049.jpg" style="width:100%">
+    <img src="school pics/IMG-20181201-WA0109.jpg" style="width:100%">
+    <img src="school pics/IMG-20181201-WA0124.jpg" style="width:100%">
+    <img src="school pics/IMG-20190406-WA0032.jpg" style="width:100%">
+    <img src="school pics/IMG-20190421-WA0024.jpg" style="width:100%">
+    <img src="" style="width:100%">
+    <img src="school pics/IMG-20190421-WA0029.jpg" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="school pics/IMG-20190421-WA0030.jpg" style="width:100%">
+    <img src="school pics/Screenshot_20190407-222204.png" style="width:100%">
+    <img src="school pics/Screenshot_20190407-222212.png" style="width:100%">
+    <img src="school pics/Screenshot_20190407-222224.png" style="width:100%">
+    <img src="school pics/Webp.net-resizeimage (2).jpg" style="width:100%">
+    <img src="school pics/IMG_20181019_222539_371.jpg" style="width:100%">
+  </div>
+</div>
+
+<script>
+// Get the elements with class="column"
+var elements = document.getElementsByClassName("column");
+
+// Declare a loop variable
+var i;
+
+// Full-width images
+function one() {
+    for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "100%";  // IE10
+    elements[i].style.flex = "100%";
+  }
+}
+
+// Two images side by side
+function two() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "50%";  // IE10
+    elements[i].style.flex = "50%";
+  }
+}
+
+// Four images side by side
+function four() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "25%";  // IE10
+    elements[i].style.flex = "25%";
+  }
+}
+
+// Add active class to the current button (highlight it)
+var header = document.getElementById("myHeader");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+<p><font size="" 
+            face="verdana"
+                         color="red"><button style="background-color: red " onclick="goBack()" >  &Ll;
+&#x022D8;
+&#8920;Go Back</button></font></p>
+
+<p></p>
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+
+
+
+
+<div class="footer">
+  <p><style>
+h1 {
+  text-align: center;
+
+
+
+<style>
+.all-browsers {
+  margin: 0;
+  padding: 5px;
+  background-color: lightgray;
+}
+
+.all-browsers > h1, .browser {
+  margin: 10px;
+  padding: 5px;
+}
+
+.browser {
+  background: white;
+}
+
+.browser > h2, p {
+  margin: 4px;
+  font-size: 90%;
+}
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: DarkSalmon;
+  color: white;
+}
+</style>
+</head>
+<body>
+  <p></p>
+</body>
+</html>
